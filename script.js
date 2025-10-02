@@ -9,21 +9,25 @@ let selectedSeats = [];
 let occupiedSeats = {1:[1,4,7], 2:[2,5,8], 3:[3,6,9]};
 
 function searchBuses() {
-    const from = document.getElementById("from").value;
-    const to = document.getElementById("to").value;
+    const from = document.getElementById("from").value.trim().toLowerCase();
+    const to = document.getElementById("to").value.trim().toLowerCase();
     const resultsDiv = document.getElementById("results");
     resultsDiv.innerHTML = "";
 
-    const filtered = buses.filter(bus => bus.from===from && bus.to===to);
+    const filtered = buses.filter(bus => 
+        bus.from.toLowerCase() === from && bus.to.toLowerCase() === to
+    );
 
-    if(filtered.length===0) resultsDiv.innerHTML="<p>No buses found.</p>";
-    else {
+    if (filtered.length === 0) {
+        resultsDiv.innerHTML = "<p>No buses found.</p>";
+    } else {
         filtered.forEach(bus => {
             resultsDiv.innerHTML += `<p>${bus.name} | ${bus.from} → ${bus.to} | ${bus.time} | ₹${bus.price} 
             <button onclick="selectBus(${bus.id})">Select</button></p>`;
         });
     }
 }
+
 
 function selectBus(busId){
     selectedBus = buses.find(b => b.id===busId);

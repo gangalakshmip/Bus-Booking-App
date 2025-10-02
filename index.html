@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold Coach </title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>GOLD COACH</h1>
+
+    <div class="booking-form">
+        <input type="text" id="from" placeholder="From City">
+        <input type="text" id="to" placeholder="To City">
+        <input type="date" id="date">
+        <button onclick="searchBuses()">Search Buses</button>
+    </div>
+
+    <div id="results" class="results"></div>
+
+    <div id="seatSelection" class="seat-selection" style="display:none;">
+        <h2 id="busTitle"></h2>
+        <div class="legend">
+            <div><span class="seat window"></span> Window</div>
+            <div><span class="seat aisle"></span> Aisle</div>
+            <div><span class="seat occupied"></span> Occupied</div>
+            <div><span class="seat selected"></span> Selected</div>
+        </div>
+        <div id="billSlip" class="bill-slip" style="display:none;">
+    <h2>Booking Bill</h2>
+    <p><strong>Bus Name:</strong> <span id="billBusName"></span></p>
+    <p><strong>From → To:</strong> <span id="billRoute"></span></p>
+    <p><strong>Time:</strong> <span id="billTime"></span></p>
+    <p><strong>Date:</strong> <span id="billDate"></span></p>
+    <p><strong>Seats:</strong> <span id="billSeats"></span></p>
+    <p><strong>Price per Seat:</strong> ₹<span id="billPrice"></span></p>
+    <p><strong>Total Price:</strong> ₹<span id="billTotal"></span></p>
+    <button onclick="closeBill()">Close</button>
+</div>
+        <div id="busLayout" class="bus-layout"></div>
+        <div class="summary">
+            <p>Selected Seats: <span id="selectedSeats">None</span></p>
+            <p>Total Price: ₹<span id="totalPrice">0</span></p>
+        </div>
+        <button onclick="confirmBooking()">Confirm Booking</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

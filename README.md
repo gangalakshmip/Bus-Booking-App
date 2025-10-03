@@ -38,7 +38,7 @@ A **frontend project** that simulates a real-world bus reservation system with a
 - Open index.html in your browser 
 
  ## Connect with me
- 🔗 LinkedIn
- https://www.linkedin.com/in/gangalakshmi-p-87a445322
- ✉️gangalaxmi2506@gmail.com
+ - **✉️Email:** [gangalaxmi2506@gmail.com]  
+- **🔗LinkedIn:** [https://www.linkedin.com/in/gangalakshmi-p-87a445322]
+- **GitHub:** [https://github.com/gangalakshmip].
  

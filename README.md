@@ -36,7 +36,7 @@ A **frontend project** that simulates a real-world bus reservation system with a
    ```bash
    https://github.com/gangalakshmip
 
- #Connect  
+ ## Connect with me
  🔗 LinkedIn
  https://www.linkedin.com/in/gangalakshmi-p-87a445322
  ✉️gangalaxmi2506@gmail.com

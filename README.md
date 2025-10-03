@@ -7,6 +7,7 @@
 
 A **frontend project** that simulates a real-world bus reservation system with a clean and intuitive booking flow.  
 
+---
 
 ## ✨ Features  
 
@@ -15,6 +16,7 @@ A **frontend project** that simulates a real-world bus reservation system with a
 - 📱 **Fully responsive (mobile-friendly)**  
 - ⚡ **Smooth booking interactions**  
 
+---
 
 ## 🛠 Tech Stack  
 
@@ -22,6 +24,7 @@ A **frontend project** that simulates a real-world bus reservation system with a
 - **CSS3**  
 - **JavaScript**  
 
+---
 
 ## 🎯 What I Learned  
 
@@ -29,6 +32,7 @@ A **frontend project** that simulates a real-world bus reservation system with a
 - **Form validation** & interactive UI design  
 - Debugging and improving **UX for real-world apps**  
 
+---
 
 ## 🚀 Getting Started  
 
@@ -36,6 +40,8 @@ A **frontend project** that simulates a real-world bus reservation system with a
    ```bash
    https://github.com/gangalakshmip
 - Open index.html in your browser 
+
+---
 
  ## Connect with me
  - **✉️Email:** [gangalaxmi2506@gmail.com]  

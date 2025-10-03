@@ -217,3 +217,46 @@ h1, h2 {
         font-size: 1.2rem;
     }
 }
+.bus-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 70px) 20px repeat(2, 70px); /* 2 left seats, 20px aisle, 2 right seats */
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 14px;
+}
+
+.aisle-gap {
+    width: 20px;
+    height: 70px; /* same as seat height */
+    background: transparent;
+}
+
+.seat {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #d6d6d6;
+    transition: transform 0.2s;
+}
+
+.seat:hover { transform: scale(1.05); }
+
+.seat.window { background-color: #b3cde0; }
+.seat.aisle { background-color: #ccebc5; }
+.seat.selected { background-color: #28a745; color: white; }
+.seat.occupied { background-color: #ff4d4d; cursor: not-allowed; }
+
+@media (max-width: 600px) {
+    .bus-layout { grid-template-columns: repeat(2, 80px) 15px repeat(2, 80px); }
+    .seat { width: 80px; height: 80px; font-size: 1.2rem; }
+    .aisle-gap { width: 15px; height: 80px; }
+}

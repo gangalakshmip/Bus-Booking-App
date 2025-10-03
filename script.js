@@ -39,20 +39,34 @@ function selectBus(busId){
     const busLayout = document.getElementById("busLayout");
     busLayout.innerHTML="";
 
-    for(let i=1;i<=16;i++){
-        const seat=document.createElement("div");
-        seat.className="seat";
+    // Bus layout: 4 columns (2 left, 2 right) with aisle in middle
+    for(let row=1; row<=4; row++){
+        for(let col=1; col<=4; col++){
+            const seat=document.createElement("div");
+            seat.className="seat";
 
-        if(i%4===1 || i%4===0) seat.classList.add("window");
-        else seat.classList.add("aisle");
+            // Left side seats
+            if(col===1 || col===2) seat.classList.add("left");
+            else seat.classList.add("right");
 
-        if(occupiedSeats[busId] && occupiedSeats[busId].includes(i)) seat.classList.add("occupied");
+            // Window seats (1st col left or 2nd col right)
+            if(col===1 || col===4) seat.classList.add("window");
+            else seat.classList.add("aisle");
 
-        seat.innerText=i;
-        seat.onclick=()=>toggleSeat(seat,i);
-        busLayout.appendChild(seat);
+            const seatNumber = (row-1)*4 + col;
+            if(occupiedSeats[busId] && occupiedSeats[busId].includes(seatNumber)) seat.classList.add("occupied");
+
+            seat.innerText = seatNumber;
+            seat.onclick = () => toggleSeat(seat, seatNumber);
+            busLayout.appendChild(seat);
+        }
+        // Add aisle gap between left & right
+        const gap = document.createElement("div");
+        gap.className = "aisle-gap";
+        busLayout.appendChild(gap);
     }
 }
+
 
 function toggleSeat(seatDiv, seatNumber){
     if(seatDiv.classList.contains("occupied")) return;

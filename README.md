@@ -35,8 +35,10 @@ A **frontend project** that simulates a real-world bus reservation system with a
 1. Clone the repository:  
    ```bash
    https://github.com/gangalakshmip
+- Open index.html in your browser 
 
  ## Connect with me
  🔗 LinkedIn
  https://www.linkedin.com/in/gangalakshmi-p-87a445322
  ✉️gangalaxmi2506@gmail.com
+ 
